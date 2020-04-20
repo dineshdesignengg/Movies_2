@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <form action="" name="search">
+            <input type="text" name="query" value="{{request.GET.query}}"/>
+            <input type="submit" value="search"/>
+        </form>
+        {% for movie in search_result %}
+        <p>{{movie.name}}</p>
+        <img src="{{movie.picture}}" alt="" />
+        {% endfor %}
+
+    </body>
+</html>
